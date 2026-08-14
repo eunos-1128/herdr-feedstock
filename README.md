@@ -5,7 +5,7 @@ Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/herdr-feedstock
 
 Home: https://herdr.dev/
 
-Package license: AGPL-3.0-or-later
+Package license: Apache-2.0
 
 Summary: Agent multiplexer that lives in your terminal
 
