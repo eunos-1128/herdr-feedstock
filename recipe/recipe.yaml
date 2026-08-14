@@ -70,7 +70,7 @@ tests:
         - herdr --skill > /dev/null
     requirements:
       run:
-        brush
+       - brush
 
 about:
   homepage: https://herdr.dev
