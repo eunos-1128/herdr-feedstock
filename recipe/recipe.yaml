@@ -1,5 +1,5 @@
 context:
-  version: "0.7.5"
+  version: "0.8.0"
 
 package:
   name: herdr
@@ -7,14 +7,14 @@ package:
 
 source:
   url: https://github.com/ogulcancelik/herdr/archive/refs/tags/v${{ version }}.tar.gz
-  sha256: 5ea0f1003af1801a6a85d201b6fa7e1de46686fccb7df1d3fa3a03c4ec2be68c
+  sha256: 47bdb0753beb8a6b157cf2fec26fbe6b787f85ffea0dde579b0001d6cd663572
   patches:
     # Fix libghostty-vt shared DLL missing ucrt/vcruntime link on Windows (cf. GhosttyLib.zig)
     # TODO: Submit PR to upstream
     - ${{ 'libghostty-vt-windows-msvc-crt.patch' if win }}
 
 build:
-  number: 1
+  number: 0
   script:
     interpreter: brush
     env:
@@ -63,8 +63,11 @@ tests:
         - share/herdr/completions/herdr.ps1
       strict: true
   - script:
-      - herdr --version
-      - herdr --help
+      interpreter: brush
+      content:
+        - herdr --version
+        - herdr --help
+        - herdr --skill > /dev/null
 
 about:
   homepage: https://herdr.dev
