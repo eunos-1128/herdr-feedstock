@@ -68,13 +68,16 @@ tests:
         - herdr --version
         - herdr --help
         - herdr --skill > /dev/null
+    requirements:
+      run:
+        brush
 
 about:
   homepage: https://herdr.dev
   documentation: https://herdr.dev/docs
   repository: https://github.com/ogulcancelik/herdr
   summary: Agent multiplexer that lives in your terminal
-  license: AGPL-3.0-or-later
+  license: Apache-2.0
   license_file:
     - LICENSE
     - THIRDPARTY.yml
